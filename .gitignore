@@ -1,0 +1,12 @@
+# Arduino/editor build noise
+*.hex
+*.elf
+*.eep
+*.map
+build/
+.vscode/
+
+# OS metadata
+Thumbs.db
+.DS_Store
+
