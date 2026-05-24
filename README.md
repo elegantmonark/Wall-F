@@ -2,9 +2,7 @@
 
 WALL-F is an autonomous waste-sorting robot built for the ELEC stream of UNSW DESN1000. The robot was designed to identify, collect, and deposit coloured balls representing different plastic waste categories inside a competition arena.
 
-In final testing, WALL-F placed **2nd out of 30 teams**, completing **16 successful ball deposits in 10 minutes**. The robot deposited balls in the correct RGB order and earned a **High Distinction** result.
-
-<img src="assets/wall-f-arena-front.jpg" alt="WALL-F operating in the competition arena" width="650">
+**Final testing result:** WALL-F placed **2nd out of 30 teams**, completing **16 successful ball deposits in 10 minutes**. The robot deposited balls in the correct RGB order and earned a **High Distinction** result.
 
 ## Overview
 
