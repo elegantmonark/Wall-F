@@ -1,22 +1,35 @@
-# Assets
+# WALL-F Visual Assets
 
-This folder contains the project images used by the GitHub documentation.
+This folder contains the build photos, CAD renders, and report figures used across the WALL-F documentation.
 
 ## Real Build Photos
 
-- `wall-f-arena-front.jpg` - completed robot operating in the arena.
-- `wall-f-arena-no-shell.jpg` - robot in the arena with shell removed.
+| Completed robot | Internal layout |
+| --- | --- |
+| ![Completed WALL-F in the arena](wall-f-arena-front.jpg) | ![WALL-F without shell in the arena](wall-f-arena-no-shell.jpg) |
 
-## CAD And Report Figures
+## Full Assembly
 
-- `full-robot-render-isometric.png` - completed concept render.
-- `chassis-no-shell-isometric.png` - internal chassis layout without shell.
-- `bottom-level-labelled-top.png` - lower chassis top view.
-- `bottom-level-labelled-side.png` - lower chassis side view.
-- `top-level-labelled-top.png` - upper chassis top view.
-- `top-level-labelled-side.png` - upper chassis side view.
-- `ball-collection-mechanism-isometric.png` - clamp mechanism.
-- `pixy2-ultrasonic-mount-isometric.png` - front sensor mount.
-- `battery-mount-isometric.png` - 9 V battery mount.
-- `wheel-side.png` - wheel side view.
-- `wheel-front.png` - wheel front view.
+| Concept render | No-shell chassis |
+| --- | --- |
+| ![Full robot render](full-robot-render-isometric.png) | ![No-shell chassis isometric](chassis-no-shell-isometric.png) |
+
+## Chassis Layout
+
+| Lower level top | Lower level side |
+| --- | --- |
+| ![Bottom level labelled top](bottom-level-labelled-top.png) | ![Bottom level labelled side](bottom-level-labelled-side.png) |
+
+| Upper level top | Upper level side |
+| --- | --- |
+| ![Top level labelled top](top-level-labelled-top.png) | ![Top level labelled side](top-level-labelled-side.png) |
+
+## Subsystems
+
+| Ball collection | Sensor mount | Battery mount |
+| --- | --- | --- |
+| ![Ball collection mechanism](ball-collection-mechanism-isometric.png) | ![PixyCam and ultrasonic mount](pixy2-ultrasonic-mount-isometric.png) | ![Battery mount](battery-mount-isometric.png) |
+
+| Wheel side | Wheel front |
+| --- | --- |
+| ![Wheel side view](wheel-side.png) | ![Wheel front view](wheel-front.png) |

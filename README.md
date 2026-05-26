@@ -13,12 +13,22 @@ The final build used a two-level PLA chassis, a removable WALL-E-inspired shell,
 ## Final Build
 
 | Completed robot | Internal layout |
-|---|---|
+| --- | --- |
 | ![Completed WALL-F in the arena](assets/wall-f-arena-front.jpg) | ![WALL-F without shell showing internal layout](assets/wall-f-arena-no-shell.jpg) |
 
 | Concept render | No-shell chassis CAD |
-|---|---|
+| --- | --- |
 | ![WALL-F concept render](assets/full-robot-render-isometric.png) | ![No-shell isometric chassis model](assets/chassis-no-shell-isometric.png) |
+
+## Electrical Schematic
+
+The final circuit schematic is included as a PNG preview and a PDF reference extracted from the submitted report.
+
+![WALL-F final circuit schematic](hardware/schematic/wall-f-schematic.png)
+
+- [Schematic PNG](hardware/schematic/wall-f-schematic.png)
+- [Schematic PDF reference](hardware/schematic/wall-f-schematic-from-report-page.pdf)
+- [Wiring and pin map](wiring.md)
 
 ## Main Hardware
 
@@ -36,36 +46,36 @@ The final build used a two-level PLA chassis, a removable WALL-E-inspired shell,
 
 The main design details are split across the following files:
 
-- `design-overview.md` presents the robot's mechanical and electrical design in a report-style format.
-- `waste-sorting-algorithm.md` explains the implemented mission flow in the final Arduino code.
-- `wiring.md` documents the final pin map, power rails, and schematic.
-- `calibration/` contains placeholder sketches for re-measuring hardware-dependent constants.
-- `ELEC_FinalReport_TeamC1.pdf` contains the submitted final report.
+- [design-overview.md](design-overview.md) presents the robot's mechanical and electrical design in a report-style format.
+- [waste-sorting-algorithm.md](waste-sorting-algorithm.md) explains the implemented mission flow in the final Arduino code.
+- [wiring.md](wiring.md) documents the final pin map, power rails, and schematic.
+- [calibration/](calibration/) contains placeholder sketches for re-measuring hardware-dependent constants.
+- [ELEC_FinalReport_TeamC1.pdf](ELEC_FinalReport_TeamC1.pdf) contains the submitted final report.
 
 ## Repository Layout
 
 ```text
 wall-f/
-├─ README.md
-├─ ELEC_FinalReport_TeamC1.pdf
-├─ design-overview.md
-├─ waste-sorting-algorithm.md
-├─ wiring.md
-├─ finalcode/
-│  └─ FINALTESTING/
-│     └─ FINALTESTING.ino
-├─ calibration/
-│  ├─ servo-clamp-calibration/
-│  ├─ motor-turn-calibration/
-│  ├─ ultrasonic-distance-test/
-│  ├─ ir-clamp-test/
-│  ├─ pixy-signature-check/
-│  └─ base-return-calibration/
-├─ hardware/
-│  ├─ schematic/
-│  └─ kicad/
-├─ assets/
-└─ report/
++-- README.md
++-- ELEC_FinalReport_TeamC1.pdf
++-- design-overview.md
++-- waste-sorting-algorithm.md
++-- wiring.md
++-- finalcode/
+|   +-- FINALTESTING/
+|       +-- FINALTESTING.ino
++-- calibration/
+|   +-- servo-clamp-calibration/
+|   +-- motor-turn-calibration/
+|   +-- ultrasonic-distance-test/
+|   +-- ir-clamp-test/
+|   +-- pixy-signature-check/
+|   +-- base-return-calibration/
++-- hardware/
+|   +-- schematic/
+|   +-- kicad/
++-- assets/
++-- report/
 ```
 
 ## Final Code
@@ -77,15 +87,6 @@ finalcode/FINALTESTING/FINALTESTING.ino
 ```
 
 The folder name matches the `.ino` file name so it can be opened directly in the Arduino IDE.
-
-## Documentation
-
-- `design-overview.md` presents the mechanical, electrical, and subsystem design.
-- `waste-sorting-algorithm.md` explains the implemented mission flow.
-- `wiring.md` documents the final pinout, power rails, and schematic references.
-- `calibration/` contains placeholder sketches for re-measuring hardware-dependent values.
-- `ELEC_FinalReport_TeamC1.pdf` contains the submitted final report.
-- `report/ELEC_FinalReport_TeamC1.pdf` is the archived copy inside the report folder.
 
 ## Calibration Note
 

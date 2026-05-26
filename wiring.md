@@ -4,14 +4,13 @@ This document describes the final wiring used by `finalcode/FINALTESTING/FINALTE
 
 ## Schematic
 
-The final schematic should be exported from KiCad into:
+The final circuit schematic is available as a PNG preview:
 
 ```text
-hardware/schematic/wall-f-schematic.pdf
 hardware/schematic/wall-f-schematic.png
 ```
 
-Until the KiCad export is added, the circuit-diagram page extracted from the final report is available at:
+The PDF reference extracted from the submitted final report is also included:
 
 ```text
 hardware/schematic/wall-f-schematic-from-report-page.pdf
@@ -19,7 +18,7 @@ hardware/schematic/wall-f-schematic-from-report-page.pdf
 
 ![WALL-F schematic](hardware/schematic/wall-f-schematic.png)
 
-The schematic should match the final report circuit diagram and the pin mapping below.
+The schematic matches the final report circuit diagram and should be read together with the pin mapping below. Editable KiCad source files will be added under `hardware/kicad/` once they are exported and checked.
 
 ## Arduino Pin Map
 

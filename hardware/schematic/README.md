@@ -1,18 +1,14 @@
-# Schematic Exports
+# WALL-F Electrical Schematic
 
-Export the final KiCad schematic into this folder.
+This folder contains the final WALL-F circuit schematic used by the wiring documentation.
 
-Recommended files:
+## Preview
 
-```text
-wall-f-schematic.pdf
-wall-f-schematic.png
-```
+![WALL-F final circuit schematic](wall-f-schematic.png)
 
-Temporary reference extracted from the final report:
+## Files
 
-```text
-wall-f-schematic-from-report-page.pdf
-```
+- `wall-f-schematic.png` - PNG schematic preview embedded in the repo documentation.
+- `wall-f-schematic-from-report-page.pdf` - PDF reference extracted from the submitted final report.
 
-The PNG can be embedded in `../../wiring.md`, while the PDF is better for detailed inspection.
+Editable KiCad project files will be added under `../kicad/` once they are exported and checked.

@@ -1,13 +1,11 @@
-# KiCad Files
+# KiCad Source Files
 
-Place the editable KiCad schematic and project files for WALL-F in this folder.
+Editable KiCad source files for the WALL-F schematic will be placed here once they are exported and checked.
 
-Expected exports:
+The checked source should match:
 
-```text
-../schematic/wall-f-schematic.pdf
-../schematic/wall-f-schematic.png
-```
+- `../schematic/wall-f-schematic.png`
+- `../../wiring.md`
+- `../../finalcode/FINALTESTING/FINALTESTING.ino`
 
-The exported schematic should match `../../wiring.md` and the final Arduino sketch pin map.
-
+Until those files are added, the published schematic reference is available in `../schematic/`.
