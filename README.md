@@ -4,6 +4,18 @@ WALL-F is an autonomous waste-sorting robot built for the ELEC stream of UNSW DE
 
 **Final testing result:** WALL-F placed **2nd out of 30 teams**, completing **16 successful ball deposits in 10 minutes**. The robot deposited balls in the correct RGB order and earned a **High Distinction** result.
 
+## Contents
+
+- [Overview](#overview)
+- [Final Build](#final-build)
+- [How It Works](#how-it-works)
+- [Design Evolution](#design-evolution)
+- [Electrical Schematic](#electrical-schematic)
+- [Documentation](#documentation)
+- [Repository Layout](#repository-layout)
+- [Final Code](#final-code)
+- [Calibration Note](#calibration-note)
+
 ## Overview
 
 WALL-F combines colour-based vision, differential drive navigation, obstacle handling, and a servo-actuated clamp to complete repeated collection cycles. The robot first logs its home base colour, then searches the arena for red, green, and blue target balls in sequence. After capturing a ball, it returns to the logged base and deposits it before continuing the next cycle.
@@ -20,6 +32,40 @@ The final build used a two-level PLA chassis, a removable WALL-E-inspired shell,
 | --- | --- |
 | ![WALL-F concept render](assets/full-robot-render-isometric.png) | ![No-shell isometric chassis model](assets/chassis-no-shell-isometric.png) |
 
+## How It Works
+
+```text
+Log base -> search target -> centre -> chase -> clamp -> return -> deposit -> repeat
+```
+
+The robot collects balls in strict RGB order:
+
+```text
+RED -> GREEN -> BLUE -> repeat
+```
+
+Core subsystems:
+
+- **Vision:** PixyCam 2.1 tracks coloured balls and home-base plates.
+- **Navigation:** differential drive with calibrated forward, reverse, and turn timings.
+- **Obstacle handling:** HC-SR04 ultrasonic distance sensing with filtered readings.
+- **Capture:** two FS90MG servos close a front clamp once the TCRT5000 IR sensor confirms a ball is inside.
+- **Return:** the robot searches for the logged base colour, centres on it, approaches, deposits, reverses, and resumes the next cycle.
+
+See [waste-sorting-algorithm.md](waste-sorting-algorithm.md) for the full algorithm breakdown.
+
+## Design Evolution
+
+- Started with several ball retrieval concepts, including a passive funnel scoop, descending bell enclosure, and servo-actuated clamp.
+- Used concept comparison and Pugh-matrix style evaluation to select the WALL-F servo-gripper concept.
+- Chose a two-front-wheel and rear-caster layout for simpler turning and improved manoeuvrability.
+- Validated PixyCam colour signatures early, then integrated ultrasonic obstacle detection and IR clamp capture sensing.
+- Moved from isolated breadboard/component tests to an assembled PLA chassis with mounted sensors and drive hardware.
+- Debugged electrical integration issues including servo jitter caused by intermittent common-ground connection.
+- Finalised an integrated algorithm combining base logging, RGB sequencing, proportional PixyCam chasing, clamp capture, obstacle handling, and return-to-base deposit.
+
+See [design-process.md](design-process.md) for the compact engineering-process summary.
+
 ## Electrical Schematic
 
 The final circuit schematic is included as a PNG preview and a PDF reference extracted from the submitted report.
@@ -30,37 +76,33 @@ The final circuit schematic is included as a PNG preview and a PDF reference ext
 - [Schematic PDF reference](hardware/schematic/wall-f-schematic-from-report-page.pdf)
 - [Wiring and pin map](wiring.md)
 
-## Main Hardware
+## Documentation
 
-- Arduino Uno controller
-- PixyCam 2.1 colour camera
-- HC-SR04 ultrasonic distance sensor
-- TCRT5000 IR sensor for clamp capture detection
-- MKRVRS dual-channel motor driver
-- Two N20 geared DC motors
-- Two FS90MG servo motors
-- 16x2 I2C LCD display
-- Dual-level PLA chassis with a front clamp and rear caster wheel
+| Document | Purpose |
+| --- | --- |
+| [Final Report](documentation/ELEC_FinalReport_TeamC1.pdf) | Submitted final report with final design, evaluation, and outcome. |
+| [Design Proposal](documentation/Design_Proposal.pdf) | Proposal-stage design concept, subsystem plan, risks, and project plan. |
+| [Design Journal 1](documentation/Design_Journal_1.pdf) | Early design process, concept generation, initial tests, and reflections. |
+| [Design Journal 2](documentation/Design_Journal_2.pdf) | Later design process, compliance testing, integration, debugging, and final iteration. |
+| [Design Overview](design-overview.md) | Repo-friendly summary of the final mechanical and electrical design. |
+| [Design Process](design-process.md) | Compact process summary derived from the proposal and design journals. |
 
-## Design Documentation
-
-The main design details are split across the following files:
-
-- [design-overview.md](design-overview.md) presents the robot's mechanical and electrical design in a report-style format.
-- [waste-sorting-algorithm.md](waste-sorting-algorithm.md) explains the implemented mission flow in the final Arduino code.
-- [wiring.md](wiring.md) documents the final pin map, power rails, and schematic.
-- [calibration/](calibration/) contains placeholder sketches for re-measuring hardware-dependent constants.
-- [ELEC_FinalReport_TeamC1.pdf](ELEC_FinalReport_TeamC1.pdf) contains the submitted final report.
+The public PDFs have been checked for student-number patterns. The design proposal copy excludes the original cover sheet containing student IDs.
 
 ## Repository Layout
 
 ```text
 wall-f/
 +-- README.md
-+-- ELEC_FinalReport_TeamC1.pdf
 +-- design-overview.md
++-- design-process.md
 +-- waste-sorting-algorithm.md
 +-- wiring.md
++-- documentation/
+|   +-- ELEC_FinalReport_TeamC1.pdf
+|   +-- Design_Proposal.pdf
+|   +-- Design_Journal_1.pdf
+|   +-- Design_Journal_2.pdf
 +-- finalcode/
 |   +-- FINALTESTING/
 |       +-- FINALTESTING.ino
@@ -75,7 +117,6 @@ wall-f/
 |   +-- schematic/
 |   +-- kicad/
 +-- assets/
-+-- report/
 ```
 
 ## Final Code
