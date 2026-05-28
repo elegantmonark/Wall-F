@@ -12,6 +12,17 @@ PixyCam vision | Arduino control | RGB sorting | Differential drive | Servo clam
 
 </div>
 
+## At A Glance
+
+| Area | Details |
+| --- | --- |
+| Competition | UNSW DESN1000 ELEC waste-sorting robot challenge |
+| Result | 2nd out of 30 teams, 16 deposits in 10 minutes, High Distinction |
+| Control | Arduino-based autonomous control loop |
+| Sensing | PixyCam 2.1 vision, ultrasonic obstacle sensing, IR clamp confirmation |
+| Actuation | Differential drive, dual-servo clamp, deposit/reverse cycle |
+| Documentation | Final report, design proposal, design journals, wiring, algorithm, calibration sketches |
+
 ## Overview
 
 WALL-F is an autonomous waste-sorting robot designed to identify, collect, and deposit coloured balls representing different plastic waste categories inside a competition arena. The robot logs its home base colour, searches for red, green, and blue target balls in sequence, captures each ball with a front clamp, returns to base, deposits it, and repeats the cycle.
@@ -51,6 +62,16 @@ RED -> GREEN -> BLUE -> repeat
 
 See [waste-sorting-algorithm.md](waste-sorting-algorithm.md) for the full algorithm breakdown.
 
+## Competition Outcome
+
+| Metric | Outcome |
+| --- | --- |
+| Placement | 2nd out of 30 teams |
+| Deposits | 16 successful ball deposits |
+| Run time | 10 minutes |
+| Sequence | Correct RGB order |
+| Course result | High Distinction |
+
 ## Engineering Highlights
 
 - Built around repeated autonomous collection cycles rather than a single scripted run.
@@ -89,6 +110,13 @@ The final circuit schematic is included as both a PNG preview and PDF exports.
 | [Wiring and pin map](wiring.md) | Component wiring, pins, and power notes |
 
 Editable KiCad files will be added under `hardware/kicad/` once exported and checked.
+
+## Rebuild Notes
+
+- Recalibrate PixyCam colour signatures under the lighting conditions of the new arena.
+- Re-measure motor turn timing after changing batteries, wheels, floor surface, or chassis weight.
+- Recheck servo open/close angles before running the full autonomous loop.
+- Keep the Arduino, motor driver, sensors, and servos on a reliable common ground.
 
 ## Documentation
 
