@@ -118,6 +118,10 @@ Editable KiCad files will be added under `hardware/kicad/` once exported and che
 - Recheck servo open/close angles before running the full autonomous loop.
 - Keep the Arduino, motor driver, sensors, and servos on a reliable common ground.
 
+## Current Focus
+
+WALL-F is now in public documentation mode. The main remaining upgrade is adding the editable KiCad project files once they are checked, so the repo contains the final code, schematic exports, wiring notes, calibration sketches, design process, and source hardware files in one place.
+
 ## Documentation
 
 | Document | Purpose |
